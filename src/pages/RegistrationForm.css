@@ -1,0 +1,122 @@
+.register-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.left-panel {
+  flex: 1;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.left-panel .overlay {
+  text-align: center;
+}
+
+.left-panel h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.left-panel p {
+  font-size: 1.2rem;
+}
+
+.right-panel {
+  flex: 1.5;
+  background: #fff;
+  padding: 40px;
+  border-left: 5px solid #1e3c72;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.college-logo {
+  width: 80px;
+  height: 80px;
+}
+
+.form-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3c72;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #1e3c72;
+  outline: none;
+  box-shadow: 0 0 5px rgba(30, 60, 114, 0.3);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.submit-btn,
+.reset-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn {
+  background: #1e3c72;
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background: #2a5298;
+}
+
+.reset-btn {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.reset-btn:hover {
+  background: #ddd;
+}
