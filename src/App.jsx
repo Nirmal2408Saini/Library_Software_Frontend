@@ -1,14 +1,13 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-
+import AndamanCollegeLibrary from "./pages/bookself";
 import Login from "./pages/Login";
-import UserDashboard from "./pages/UserDashboard";
-import AdminDashboard from "./pages/AdminDashboard";
 import LibraryDashboard from "./pages/Dashboard";
+import Registration from "./pages/registration";
 import Nav from "./components/Nav";
 import { getCurrentUser } from "./utils/auth";
-import Registration from "./pages/registration";
 
+// Protect routes
 function RequireAuth({ children, adminOnly = false }) {
   const user = getCurrentUser();
   if (!user) return <Navigate to="/login" replace />;
@@ -19,41 +18,27 @@ function RequireAuth({ children, adminOnly = false }) {
 
 export default function App() {
   return (
-    // <Login />
-    <LibraryDashboard />
-    // <Registration />
-    // <div className="app-root">
+    <AndamanCollegeLibrary />
+    // <>
+    //   {}
     //   <Nav />
-    //   <main className="container">
-    //     <Routes>
-    //       <Route path="/" element={<Navigate to="/register" replace />} />
-    //       <Route path="/register" element={<Register />} />
-    //       <Route path="/login" element={<Login />} />
 
-    //       <Route
-    //         path="/dashboard"
-    //         element={
-    //           <RequireAuth>
-    //             <UserDashboard />
-    //           </RequireAuth>
-    //         }
-    //       />
+    //   <Routes>
+    //     {/* Default route */}
+    //     <Route path="/" element={<Navigate to="/login" replace />} />
 
-    //       <Route
-    //         path="/admin"
-    //         element={
-    //           <RequireAuth adminOnly={true}>
-    //             <AdminDashboard />
-    //           </RequireAuth>
-    //         }
-    //       />
+    //     {/* Login */}
+    //     <Route path="/login" element={<Login />} />
 
-    //       <Route
-    //         path="*"
-    //         element={<h2 style={{ padding: 20 }}>404 - Not Found</h2>}
-    //       />
-    //     </Routes>
-    //   </main>
-    // </div>
+    //     {/* Registration */}
+    //     <Route path="/register" element={<Registration />} />
+
+    //     {/* Dashboard (protected) */}
+    //     <Route path="/dashboard" element={<LibraryDashboard />} />
+
+    //     {/* Catch-all for unknown routes */}
+    //     <Route path="*" element={<Navigate to="/login" replace />} />
+    //   </Routes>
+    // </>
   );
 }
